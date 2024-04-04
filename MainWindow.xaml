@@ -1,0 +1,63 @@
+﻿<Window x:Class="Oussama_Moustarzik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oussama_Moustarzik"
+        mc:Ignorable="d"
+        Title="Controle Continu 1" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="11,4,16,5" Width="140" Grid.RowSpan="3" RenderTransformOrigin="0.386,0.413">
+            <Label x:Name="label" Content="value 3"/>
+            <TextBox x:Name="number" TextWrapping="Wrap" Width="120"/>
+            <Slider x:Name="S1" RenderTransformOrigin="0.489,1.951" ValueChanged="slider_ValueChanged" Minimum="1" Maximum="500" Width="120">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-2.525"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-2.151"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="TextBlock"/>
+            <Label x:Name="label2" Content="Updated laues" RenderTransformOrigin="0.493,3.357" Margin="0,45,0,0"/>
+            <StackPanel Height="100" Margin="0,123,0,0">
+                <Label x:Name="label3" Content="value1 :" Width="106" Margin="0,5,0,0"/>
+                <Label x:Name="label3_Copy" Content="values2 :" Width="106" Margin="0,5,0,0"/>
+                <Label x:Name="label3_Copy1" Content="value3 :" Width="106" Margin="0,5,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="3,9,23,8" Grid.Column="1" Width="140" Grid.RowSpan="3">
+            <Label x:Name="label1" Content="value 1"/>
+            <TextBox x:Name="number2" IsReadOnly="False" TextWrapping="Wrap" Width="120"/>
+            <Slider x:Name="S2" Width="120" Minimum="1" Maximum="500" ValueChanged="slider1_ValueChanged"/>
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock"/>
+            <Button x:Name="button" Content="Update" RenderTransformOrigin="0.626,2.964" Margin="5,75,0,0" Width="85" Click="button_Click"/>
+            <StackPanel Height="100" Margin="1,94,0,0">
+                <TextBlock x:Name="number5" TextWrapping="Wrap" Text="TextBlock" Margin="0,5,0,0" Background="#FFF7F7F6" Width="51" Height="26" RenderTransformOrigin="0.588,0.046"/>
+                <TextBlock x:Name="number6" TextWrapping="Wrap" Text="TextBlock" Margin="0,5,0,0" Background="#FFE0E85D" Width="51.89" Height="25.96"/>
+                <TextBlock x:Name="number7" TextWrapping="Wrap" Text="TextBlock" Margin="0,5,0,0" Background="#FF4AEDDB" Width="51.89" Height="25.96"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="11,11,16,5" Grid.Column="2" Width="140" Grid.RowSpan="3">
+            <Label x:Name="updatedValue" Content="value 2:"/>
+            <TextBox x:Name="number3" IsReadOnly="True" TextWrapping="Wrap" Width="120"/>
+            <Slider x:Name="S3" Width="120" Maximum="500" Minimum="1"/>
+            <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="TextBlock"/>
+            <StackPanel Orientation="Vertical"/>
+            <ListBox x:Name="listBox" Height="97" Margin="0,187,0,0" SelectionChanged="listBox_SelectionChanged"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
